@@ -55,103 +55,103 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: @light-gray;
+  color: darken(white, 75%);
 }
 
 .syntax--keyword {
-  color: @purple;
+
+  color: darken(white, 20%);
 
   &.syntax--control {
-    color: @purple;
+    color: darken(white, 35%);
   }
 
   &.syntax--operator {
-    color: @syntax-text-color;
+    color: darken(white, 35%);
   }
 
   &.syntax--other.syntax--special-method {
-    color: @blue;
+    color: darken(white, 25%);
   }
 
   &.syntax--other.syntax--unit {
-    color: @orange;
+    color: darken(white, 25%);
   }
 }
 
 .syntax--storage {
-  color: @purple;
+  color: darken(white, 50%);
 }
 
 .syntax--constant {
-  color: @orange;
+  color: darken(white, 30%);
 
   &.syntax--character.syntax--escape {
-    color: @cyan;
+    color: red;
   }
 
   &.syntax--numeric {
-    color: @orange;
+    color: darken(white, 30%);
   }
 
   &.syntax--other.syntax--color {
-    color: @cyan;
+    color: red;
   }
 
   &.syntax--other.syntax--symbol {
-    color: @green;
+    color: red;
   }
 }
 
 .syntax--variable {
-  color: @red;
+  color: darken(white, 20%);
 
   &.syntax--interpolation {
-    color: darken(@red, 10%);
+    color: red;
   }
 
   &.syntax--parameter.syntax--function {
-    color: @syntax-text-color;
+    color: darken(white, 30%);
   }
 }
 
 .syntax--invalid.syntax--illegal {
-  background-color: @red;
-  color: @syntax-background-color;
+  color: red;
 }
 
 .syntax--string {
-  color: @green;
+  color: darken(white, 30%);
 
 
   &.syntax--regexp {
-    color: @cyan;
+    color: red;
 
     .syntax--source.syntax--ruby.syntax--embedded {
-      color: @orange;
+      color: red;
     }
   }
 
   &.syntax--other.syntax--link {
-    color: @red;
+    color: red;
   }
 }
 
 .syntax--punctuation {
   &.syntax--definition {
     &.syntax--comment {
-      color: @light-gray;
+      color: darken(white, 75%);
     }
 
     &.syntax--string,
     &.syntax--variable,
     &.syntax--parameters,
     &.syntax--array {
-      color: @syntax-text-color;
+      color: darken(white, 50%);
     }
 
     &.syntax--heading,
     &.syntax--identity {
-      color: @blue;
+      color: red;
     }
 
     &.syntax--bold {
@@ -166,28 +166,28 @@ atom-text-editor {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: red;
   }
 
 }
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: red;
   }
 
   &.syntax--function  {
-    color: @cyan;
+    color: darken(white, 15%);
 
     &.syntax--any-method {
-      color: @blue;
+      color: red;
     }
   }
 }
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @blue;
+    color: darken(white, 15%);
   }
   &.syntax--name.syntax--type {
     color: @light-orange;
@@ -206,12 +206,12 @@ atom-text-editor {
   }
 
   &.syntax--name.syntax--tag {
-    color: @red;
+    color: darken(white, 25%);
     text-decoration: underline;
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @orange;
+    color: darken(white, 35%);
 
     &.syntax--id {
       color: @blue;
