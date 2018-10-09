@@ -87,15 +87,20 @@ atom-text-editor {
   color: darken(white, 30%);
 
   &.syntax--character.syntax--escape {
-    color: red;
+    color: darken(white, 30%);
+
+    &.syntax--linefeed {
+      color: darken(white, 10%)
+    }
+
   }
 
   &.syntax--numeric {
-    color: darken(white, 30%);
+    color: darken(white, 20%);
   }
 
   &.syntax--other.syntax--color {
-    color: red;
+    color: darken(white, 10%);
   }
 
   &.syntax--other.syntax--symbol {
@@ -145,7 +150,8 @@ atom-text-editor {
     &.syntax--string,
     &.syntax--variable,
     &.syntax--parameters,
-    &.syntax--array {
+    &.syntax--array,
+    &.syntax--constant {
       color: darken(white, 50%);
     }
 
@@ -163,17 +169,24 @@ atom-text-editor {
       color: @purple;
       font-style: italic;
     }
+
+    &.syntax--section.syntax--class {
+      color: darken(white, 50%)
+    }
   }
 
   &.syntax--section.syntax--embedded {
-    color: red;
+  }
+
+  &.syntax--separator {
+    color: darken(white, 50%);
   }
 
 }
 
 .syntax--support {
   &.syntax--class {
-    color: red;
+    color: darken(white, 5%);
   }
 
   &.syntax--function  {
@@ -186,21 +199,21 @@ atom-text-editor {
 }
 
 .syntax--entity {
+
   &.syntax--name.syntax--function {
     color: darken(white, 15%);
   }
 
   &.syntax--name.syntax--type {
-    color: @light-orange;
-    text-decoration: underline;
+    color: darken(white, 5%);
   }
 
   &.syntax--other.syntax--inherited-class {
-    color: @green;
+    color: darken(white, 25%);
   }
 
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+    color: darken(white, 5%);
   }
 
   &.syntax--name.syntax--section {
@@ -209,7 +222,6 @@ atom-text-editor {
 
   &.syntax--name.syntax--tag {
     color: darken(white, 25%);
-    text-decoration: underline;
   }
 
   &.syntax--other.syntax--attribute-name {
@@ -224,11 +236,15 @@ atom-text-editor {
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: darken(white, 50%);
+  }
+
+  &.syntax--method {
+    color: darken(white, 20%);
   }
 
   &.syntax--link {
-    color: @orange;
+    color: darken(white, 50%);
   }
 
   &.syntax--require {

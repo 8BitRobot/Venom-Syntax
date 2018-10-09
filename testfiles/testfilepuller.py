@@ -8,19 +8,16 @@ with open('creds.txt', 'r') as f:
 
 g = Github(creds[0], creds[1])
 
-search = g.search_repositories("language:javascript")
-resultslist = []
+for i in ["javascript", "java", "python", "c++", "html"]:
+    search = g.search_repositories("language:{} size:<10".format(i))
+    os.system('git clone {}'.format(search[random.randint(0,99)].git_url))
+    os.system('git clone {}'.format(search[random.randint(100,199)].git_url))
 
-for i in range(2):
-    resultslist.append(search[random.randint(0,100)])
+print("\nNow you can open each project in Atom and test your theme.\n\
+Use the SyntaxThemeTester package to aid in this.")
 
-print(resultslist)
-for i in resultslist:
-    print(i.git_url)
-
-os.system('git clone {}'.format(resultslist[0].git_url))
-
-input("Press Enter to continue...")
+input("When you're done, press Enter to continue. This will delete all of the \
+cloned repositories.")
 
 for i in os.listdir():
     if os.path.isdir(i):
