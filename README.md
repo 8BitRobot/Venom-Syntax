@@ -13,4 +13,6 @@ A grayscale syntax theme for Atom that's easy on the eyes but still allows for p
 
 ### Installation: 
 
-`apm install venom-syntax` or clone this repository into your computer
+Install running this command:`apm install venom-syntax`
+OR
+Clone this repository into your ~/.atom/packages folder using `git clone https://github.com/8BitRobot/Venom-Syntax`
